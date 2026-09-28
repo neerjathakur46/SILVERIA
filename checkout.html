@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - Silveria</title>
+
+    <link rel="stylesheet"
+          href="css/style.css">
+
+</head>
+
+<body>
+
+
+<header class="checkout-header">
+
+    <div class="logo">
+
+        <a href="index.html">Silveria</a>
+
+        <small>PURE SILVER</small>
+
+    </div>
+
+    <span>
+        Secure Checkout 🔒
+    </span>
+
+</header>
+
+
+<section class="checkout-container">
+
+
+    <!-- CUSTOMER DETAILS -->
+
+    <div class="checkout-form">
+
+        <h1>Checkout</h1>
+
+
+        <h2>Delivery Information</h2>
+
+
+        <form id="checkoutForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Full Name"
+                required>
+
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Email Address"
+                required>
+
+
+            <input
+                type="tel"
+                id="phone"
+                placeholder="Phone Number"
+                maxlength="10"
+                required>
+
+
+            <textarea
+                id="address"
+                placeholder="Full Address"
+                required></textarea>
+
+
+            <div class="two-input">
+
+                <input
+                    type="text"
+                    id="city"
+                    placeholder="City"
+                    required>
+
+                <input
+                    type="text"
+                    id="pin"
+                    placeholder="PIN Code"
+                    maxlength="6"
+                    required>
+
+            </div>
+
+
+            <h2>Payment Method</h2>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="COD"
+                    checked>
+
+                Cash on Delivery
+
+            </label>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="UPI">
+
+                UPI
+
+            </label>
+
+
+            <label class="payment-option">
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="Card">
+
+                Credit / Debit Card
+
+            </label>
+
+
+            <button
+                type="button"
+                onclick="placeOrder()"
+                class="place-order">
+
+                PLACE ORDER
+
+            </button>
+
+        </form>
+
+    </div>
+
+
+    <!-- ORDER SUMMARY -->
+
+    <div class="checkout-summary">
+
+        <h2>Your Order</h2>
+
+        <div id="checkoutItems"></div>
+
+        <hr>
+
+        <div class="summary-row">
+
+            <span>Subtotal</span>
+
+            <strong id="checkoutSubtotal">
+                ₹0
+            </strong>
+
+        </div>
+
+
+        <div class="summary-row">
+
+            <span>Delivery</span>
+
+            <strong>FREE</strong>
+
+        </div>
+
+
+        <div class="summary-row total">
+
+            <span>Total</span>
+
+            <strong id="checkoutTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- SUCCESS POPUP -->
+
+<div id="orderSuccess"
+     class="success-popup">
+
+    <div class="success-box">
+
+        <div class="success-icon">
+            ✓
+        </div>
+
+        <h2>Order Placed Successfully!</h2>
+
+        <p>
+            Thank you for shopping with Silveria.
+        </p>
+
+        <p>
+            Your Order ID:
+            <strong id="orderId"></strong>
+        </p>
+
+        <button onclick="continueShopping()">
+            CONTINUE SHOPPING
+        </button>
+
+    </div>
+
+</div>
+
+
+<script src="js/products.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

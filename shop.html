@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Silver Jewellery - Silveria</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+
+        <a href="index.html">Silveria</a>
+
+        <small>PURE SILVER</small>
+
+    </div>
+
+
+    <div class="search-box">
+
+        <span>⌕</span>
+
+        <input
+            type="text"
+            id="shopSearch"
+            placeholder="Search for Jewellery..."
+            onkeyup="searchProducts()">
+
+    </div>
+
+
+    <div class="header-icons">
+
+        <div class="price">
+
+            <span>Silver Price</span>
+
+            <b>₹ 95/g</b>
+
+        </div>
+
+        <a href="#" class="icon">♧</a>
+
+        <a href="#" class="icon">♡</a>
+
+        <a href="cart.html" class="cart-icon">
+
+            🛒
+
+            <span id="cartCount">0</span>
+
+        </a>
+
+        <a href="#" class="login">
+            ♙ Login
+        </a>
+
+    </div>
+
+</header>
+
+
+<!-- ================= NAVBAR ================= -->
+
+<nav class="navbar">
+
+    <a href="shop.html?category=Rings">Rings</a>
+
+    <a href="shop.html?category=Bracelets">Bracelets & Bangles</a>
+
+    <a href="shop.html?category=Necklaces">Necklaces</a>
+
+    <a href="shop.html">Silver Jewellery</a>
+
+    <a href="shop.html">Collections</a>
+
+    <a href="shop.html">Gifting</a>
+
+    <a href="shop.html">More Jewellery</a>
+
+</nav>
+
+
+<!-- ================= PAGE TITLE ================= -->
+
+<section class="shop-header">
+
+    <h1>
+        Silver Jewellery
+        <span id="productCount">8</span>
+        Designs
+    </h1>
+
+    <div class="breadcrumb">
+
+        <a href="index.html">Home</a>
+
+        <span>›</span>
+
+        <b>Silver Jewellery</b>
+
+    </div>
+
+</section>
+
+
+<!-- ================= SHOP AREA ================= -->
+
+<section class="shop-area">
+
+
+    <!-- FILTER SIDEBAR -->
+
+    <aside class="filter-sidebar">
+
+        <h2>FILTER BY</h2>
+
+
+        <div class="filter-box">
+
+            <h3>Category</h3>
+
+            <label>
+                <input type="checkbox"
+                       value="Rings"
+                       onchange="filterProducts()">
+                Rings
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       value="Bracelets"
+                       onchange="filterProducts()">
+                Bracelets
+            </label>
+
+            <label>
+                <input type="checkbox"
+                       value="Necklaces"
+                       onchange="filterProducts()">
+                Necklaces
+            </label>
+
+        </div>
+
+
+        <div class="filter-box">
+
+            <h3>Price</h3>
+
+            <label>
+                <input type="radio"
+                       name="price"
+                       value="all"
+                       onchange="filterProducts()"
+                       checked>
+                All
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="price"
+                       value="1000"
+                       onchange="filterProducts()">
+                Under ₹1,000
+            </label>
+
+            <label>
+                <input type="radio"
+                       name="price"
+                       value="2000"
+                       onchange="filterProducts()">
+                Under ₹2,000
+            </label>
+
+        </div>
+
+
+        <button
+            class="clear-filter"
+            onclick="clearFilters()">
+
+            CLEAR FILTERS
+
+        </button>
+
+    </aside>
+
+
+    <!-- PRODUCTS -->
+
+    <main class="shop-products">
+
+
+        <div class="shop-top">
+
+            <p>
+                Showing
+                <b id="showingCount">8</b>
+                products
+            </p>
+
+
+            <select id="sortProducts"
+                    onchange="sortProducts()">
+
+                <option value="default">
+                    Sort By
+                </option>
+
+                <option value="low">
+                    Price: Low to High
+                </option>
+
+                <option value="high">
+                    Price: High to Low
+                </option>
+
+                <option value="rating">
+                    Customer Rating
+                </option>
+
+            </select>
+
+        </div>
+
+
+        <div
+            id="productGrid"
+            class="product-grid shop-grid">
+        </div>
+
+    </main>
+
+</section>
+
+
+<!-- ================= COOKIE ================= -->
+
+<div class="cookie-banner" id="cookieBanner">
+
+    <div class="cookie-text">
+
+        <p>
+            Cookies and similar technologies allow us to enhance
+            site navigation, provide personalized content and
+            analyse site usage.
+        </p>
+
+    </div>
+
+    <button onclick="closeCookie()">
+        Adjust My Preferences
+    </button>
+
+    <button onclick="closeCookie()">
+        Reject All
+    </button>
+
+    <button onclick="closeCookie()">
+        Allow All
+    </button>
+
+    <span class="cookie-close"
+          onclick="closeCookie()">×</span>
+
+</div>
+
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+
+</body>
+</html>

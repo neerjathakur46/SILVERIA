@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Shopping Cart - Silvora</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+
+<header class="header">
+
+    <div class="logo">
+
+        <a href="index.html">Silveria</a>
+
+        <small>PURE SILVER</small>
+
+    </div>
+
+    <a href="shop.html"
+       class="continue-shopping">
+
+        ← Continue Shopping
+
+    </a>
+
+</header>
+
+
+<section class="cart-page">
+
+    <h1>Your Shopping Cart</h1>
+
+    <div id="cartPageItems"></div>
+
+
+    <div class="cart-summary">
+
+        <h2>Order Summary</h2>
+
+        <div>
+            Subtotal:
+            <strong id="cartPageTotal">
+                ₹0
+            </strong>
+        </div>
+
+        <div>
+            Shipping:
+            <strong>FREE</strong>
+        </div>
+
+        <hr>
+
+        <div class="grand-total">
+
+            Total:
+
+            <strong id="grandTotal">
+                ₹0
+            </strong>
+
+        </div>
+
+        <button
+            class="checkout-btn"
+            onclick="goToCheckout()">
+
+            PROCEED TO CHECKOUT
+
+        </button>
+
+    </div>
+
+</section>
+
+
+<script src="js/products.js"></script>
+<script src="js/script.js"></script>
+
+<script>
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    renderCartPage();
+
+});
+
+</script>
+
+</body>
+</html>
